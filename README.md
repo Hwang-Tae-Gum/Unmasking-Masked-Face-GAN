@@ -29,7 +29,7 @@ The core of the unmasking network comprises a Generator and two Discriminators, 
 
 * **Architecture:** A U-Net like encoder-decoder structure with skip connections.
 * **Input:** Concatenated tensor of the masked face image (3 channels) and its corresponding binary mask map (1 channel), totaling 4 input channels.
-* **Output:** A 3-channel RGB image representing the unmasked (completed) face.
+* **Output:** A 3-channel RGB image representing the unmasking (completed) face.
 * **Layers:** Utilizes `Conv2d` for downsampling, `ConvTranspose2d` for upsampling, `BatchNorm2d`, `LeakyReLU` in encoder, and `ReLU` in decoder. Skip connections help preserve fine details from the encoder path.
 
 ### 2. Discriminators (`netD_whole`, `netD_mask`)
@@ -118,19 +118,19 @@ Sample unmasking results are visualized, comparing original, masked, and edited 
 
 **Individual Sample Results & Visual Examples:**
 
-| Original Image | Masked Image | Edited Image (Unmasked) |
-| :------------- | :----------- | :---------------------- |
-| ![Original 1](path/to/original_1.jpg) | ![Masked 1](path/to/masked_1.jpg) | ![Edited 1](path/to/edited_1.jpg) |
-| _PSNR: 35.52, SSIM: 0.9667, PercLoss: 0.4126_ | | |
-| ![Original 2](path/to/original_2.jpg) | ![Masked 2](path/to/masked_2.jpg) | ![Edited 2](path/to/edited_2.jpg) |
-| _PSNR: 37.68, SSIM: 0.9687, PercLoss: 0.4400_ | | |
-| ![Original 3](path/to/original_3.jpg) | ![Masked 3](path/to/masked_3.jpg) | ![Edited 3](path/to/edited_3.jpg) |
-| _PSNR: 32.46, SSIM: 0.9290, PercLoss: 0.5458_ | | |
-| ![Original 4](path/to/original_4.jpg) | ![Masked 4](path/to/masked_4.jpg) | ![Edited 4](path/to/edited_4.jpg) |
-| _PSNR: 36.57, SSIM: 0.9750, PercLoss: 0.3728_ | | |
-| ![Original 5](path/to/original_5.jpg) | ![Masked 5](path/to/masked_5.jpg) | ![Edited 5](path/to/edited_5.jpg) |
-| _PSNR: 35.95, SSIM: 0.9660, PercLoss: 0.4041_ | | |
-*(**Important:** Please replace `path/to/original_1.jpg` etc. with the actual URLs of your images on your GitHub repository after you upload them.)*
+| Combined Image: Original | Masked | Edited (Unmasked) |
+| :---------------------------------------------------- |
+| ![Combined Result 1](result/unmasking_result_1.png)   |
+| _PSNR: 35.52, SSIM: 0.9667, PercLoss: 0.4126_         |
+| ![Combined Result 2](result/unmasking_result_2.png)   |
+| _PSNR: 37.68, SSIM: 0.9687, PercLoss: 0.4400_         |
+| ![Combined Result 3](result/unmasking_result_3.png)   |
+| _PSNR: 32.46, SSIM: 0.9290, PercLoss: 0.5458_         |
+| ![Combined Result 4](result/unmasking_result_4.png)   |
+| _PSNR: 36.57, SSIM: 0.9750, PercLoss: 0.3728_         |
+| ![Combined Result 5](result/unmasking_result_5.png)   |
+| _PSNR: 35.95, SSIM: 0.9660, PercLoss: 0.4041_         |
+*(**Important:** Please ensure that these image files (`unmasking_result_1.png` through `unmasking_result_5.png`) are located in a folder named `result` within your GitHub repository, and that they have been pushed to GitHub for them to display correctly.)*
 
 ---
 
