@@ -104,6 +104,36 @@ After training, the Generator's performance is evaluated using standard image qu
 
 Sample unmasking results are visualized, comparing original, masked, and edited images, along with their PSNR, SSIM, and Perceptual Loss scores.
 
+---
+
+### **Evaluation Results**
+
+**Note:** The following results are based on the evaluation of 5 randomly selected images from the dataset after training up to epoch 95.
+
+| Metric                 | Average Value           |
+| :--------------------- | :---------------------- |
+| PSNR                   | 35.64 dB                |
+| SSIM                   | 0.9611                  |
+| Perceptual Loss (FD)   | 0.4351                  |
+
+**Individual Sample Results & Visual Examples:**
+
+| Original Image | Masked Image | Edited Image (Unmasked) |
+| :------------- | :----------- | :---------------------- |
+| ![Original 1](path/to/original_1.jpg) | ![Masked 1](path/to/masked_1.jpg) | ![Edited 1](path/to/edited_1.jpg) |
+| _PSNR: 35.52, SSIM: 0.9667, PercLoss: 0.4126_ | | |
+| ![Original 2](path/to/original_2.jpg) | ![Masked 2](path/to/masked_2.jpg) | ![Edited 2](path/to/edited_2.jpg) |
+| _PSNR: 37.68, SSIM: 0.9687, PercLoss: 0.4400_ | | |
+| ![Original 3](path/to/original_3.jpg) | ![Masked 3](path/to/masked_3.jpg) | ![Edited 3](path/to/edited_3.jpg) |
+| _PSNR: 32.46, SSIM: 0.9290, PercLoss: 0.5458_ | | |
+| ![Original 4](path/to/original_4.jpg) | ![Masked 4](path/to/masked_4.jpg) | ![Edited 4](path/to/edited_4.jpg) |
+| _PSNR: 36.57, SSIM: 0.9750, PercLoss: 0.3728_ | | |
+| ![Original 5](path/to/original_5.jpg) | ![Masked 5](path/to/masked_5.jpg) | ![Edited 5](path/to/edited_5.jpg) |
+| _PSNR: 35.95, SSIM: 0.9660, PercLoss: 0.4041_ | | |
+*(**Important:** Please replace `path/to/original_1.jpg` etc. with the actual URLs of your images on your GitHub repository after you upload them.)*
+
+---
+
 ## Improvements and Future Updates
 
 * **More Diverse Mask Generation:** Explore semantic mask generation (e.g., using a mask R-CNN) or more complex, realistic mask shapes and textures.
@@ -124,5 +154,3 @@ This project's approach and methodology are inspired by the research presented i
     * **Authors:** Nizam Ud Din, Kamran Javed, Seho Bae, and Juneho Yi
     * **Publication:** IEEE Access
     * This work was conducted at Sungkyunkwan University, Suwon, South Korea.
-
----
